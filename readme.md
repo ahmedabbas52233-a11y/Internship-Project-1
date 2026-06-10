@@ -32,12 +32,6 @@ The implementation prioritizes:
 
 ---
 
-## Live Demo
-
-🔗 [View Live Site] 
-
----
-
 ## Screenshots
 
 | Mobile (375px) | Tablet (768px) | Desktop (1280px) |
