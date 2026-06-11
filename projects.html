@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ahmed Abbas — Full-Stack Developer | DecodeLabs 2026</title>
-    <meta name="description" content="Full-Stack Developer Portfolio — DecodeLabs Internship 2026. Node.js, Express, MongoDB, JWT Authentication.">
+    <title>Projects — Ahmed Abbas | DecodeLabs 2026</title>
+    <meta name="description" content="Full-stack projects built during DecodeLabs Internship 2026. REST API, MongoDB, JWT Authentication.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -15,7 +15,6 @@
     <canvas id="particle-canvas"></canvas>
     <div class="noise-overlay"></div>
 
-    <!-- Navigation -->
     <nav class="nav" id="navbar">
         <div class="nav__inner">
             <a href="index.html" class="nav__brand">
@@ -23,8 +22,8 @@
                 <div class="nav__brand-text">Ahmed <span>Abbas</span></div>
             </a>
             <ul class="nav__links">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
                 <li><a href="playground.html">API Playground</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
@@ -36,7 +35,6 @@
         </div>
     </nav>
 
-    <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
         <button class="mobile-menu__close" id="closeMenu">✕</button>
         <a href="index.html">Home</a>
@@ -45,94 +43,61 @@
         <a href="contact.html">Contact</a>
     </div>
 
-    <!-- Hero -->
-    <section class="hero">
-        <div class="hero__inner">
+    <section class="hero hero--compact">
+        <div class="hero__inner hero--center">
             <div class="hero__content">
                 <div class="hero__badge">
                     <span>◉</span>
-                    <span>DecodeLabs Internship 2026</span>
+                    <span>Portfolio</span>
                 </div>
                 <h1 class="hero__title">
-                    Building<br>
-                    <span class="gradient">Full-Stack</span><br>
-                    Applications
+                    All <span class="gradient">Projects</span>
                 </h1>
                 <p class="hero__desc">
-                    Four progressive projects demonstrating backend API development, MongoDB integration, JWT authentication, and real-time frontend connectivity.
+                    Four progressive full-stack projects demonstrating modern web development from frontend to database.
                 </p>
-                <div class="hero__actions">
-                    <a href="projects.html" class="btn btn--primary">View Projects →</a>
-                    <a href="playground.html" class="btn btn--ghost">Test API</a>
-                </div>
-                <div class="hero__stats">
-                    <div class="hero-stat">
-                        <span class="hero-stat__num">4</span>
-                        <span class="hero-stat__label">Projects</span>
-                    </div>
-                    <div class="hero-stat">
-                        <span class="hero-stat__num">36</span>
-                        <span class="hero-stat__label">Tests</span>
-                    </div>
-                    <div class="hero-stat">
-                        <span class="hero-stat__num">100%</span>
-                        <span class="hero-stat__label">CRUD</span>
-                    </div>
-                </div>
-            </div>
-            <div class="hero__visual">
-                <div class="hero__orb">
-                    <div class="orb-ring"></div>
-                    <div class="orb-ring"></div>
-                    <div class="orb-ring"></div>
-                    <div class="orb-core"></div>
-                </div>
             </div>
         </div>
     </section>
 
-    <!-- Featured Projects -->
-    <section class="section">
+    <section class="section section--tight">
         <div class="section__inner">
-            <div class="section__header reveal">
-                <div class="section__eyebrow">Featured Work</div>
-                <h2 class="section__title">What I Built</h2>
-                <p class="section__desc">Progressive full-stack projects from frontend to database integration.</p>
-            </div>
             <div class="projects-grid">
-                <div class="project-card reveal reveal-delay-1">
+                <div class="project-card reveal">
                     <div class="project-card__header">
                         <span class="project-card__num">PROJECT_01</span>
                         <div class="project-card__icon">🎨</div>
                     </div>
-                    <h3 class="project-card__title">The Skin — Frontend</h3>
-                    <p class="project-card__desc">Responsive landing page with modern UI/UX. Semantic HTML5, CSS3 animations, and vanilla JavaScript interactivity.</p>
+                    <h3 class="project-card__title">The Skin — Frontend Foundation</h3>
+                    <p class="project-card__desc">A responsive, accessible landing page built with semantic HTML5, modern CSS3, and vanilla JavaScript. Features smooth animations, form validation, and mobile-first responsive design.</p>
                     <div class="project-card__tags">
                         <span class="tag">HTML5</span>
-                        <span class="tag">CSS3</span>
-                        <span class="tag">JavaScript</span>
+                        <span class="tag">CSS3 Grid & Flexbox</span>
+                        <span class="tag">Vanilla JS</span>
                         <span class="tag">Responsive</span>
+                        <span class="tag">Accessibility</span>
                     </div>
                     <div class="project-card__footer">
                         <div class="project-card__status">
                             <span class="project-card__status-dot"></span>
                             <span>Complete</span>
                         </div>
-                        <a href="https://github.com/ahmedabbas52233-a11y/Internship-Project-1" target="_blank" rel="noopener noreferrer" class="project-card__link">View Repo →</a>
+                        <a href="https://github.com/ahmedabbas52233-a11y/Internship-Project-1" target="_blank" rel="noopener noreferrer" class="project-card__link">GitHub →</a>
                     </div>
                 </div>
 
-                <div class="project-card reveal reveal-delay-2">
+                <div class="project-card reveal reveal-delay-1">
                     <div class="project-card__header">
                         <span class="project-card__num">PROJECT_02</span>
                         <div class="project-card__icon">⚡</div>
                     </div>
                     <h3 class="project-card__title">The Nervous System — REST API</h3>
-                    <p class="project-card__desc">Production-grade Express.js API with full CRUD, input validation, rate limiting, Helmet security, and Jest test coverage.</p>
+                    <p class="project-card__desc">Production-grade Express.js API with complete CRUD operations for Users and Posts. Includes input validation, rate limiting, Helmet security headers, CORS, and comprehensive Jest + Supertest test coverage.</p>
                     <div class="project-card__tags">
                         <span class="tag">Node.js</span>
-                        <span class="tag">Express</span>
+                        <span class="tag">Express.js</span>
                         <span class="tag">Jest</span>
+                        <span class="tag">Supertest</span>
                         <span class="tag">Security</span>
                     </div>
                     <div class="project-card__footer">
@@ -140,43 +105,45 @@
                             <span class="project-card__status-dot"></span>
                             <span>Complete</span>
                         </div>
-                        <a href="https://github.com/ahmedabbas52233-a11y/Internship-Project-2" target="_blank" rel="noopener noreferrer" class="project-card__link">View Repo →</a>
+                        <a href="https://github.com/ahmedabbas52233-a11y/Internship-Project-2" target="_blank" rel="noopener noreferrer" class="project-card__link">GitHub →</a>
+                    </div>
+                </div>
+
+                <div class="project-card reveal reveal-delay-2">
+                    <div class="project-card__header">
+                        <span class="project-card__num">PROJECT_03</span>
+                        <div class="project-card__icon">🗄️</div>
+                    </div>
+                    <h3 class="project-card__title">The Memory — MongoDB Integration</h3>
+                    <p class="project-card__desc">Migrated from in-memory storage to persistent MongoDB using Mongoose ODM. Designed schemas with relationships, enforced data integrity with unique indexes and required fields, and implemented cascade deletes.</p>
+                    <div class="project-card__tags">
+                        <span class="tag">MongoDB</span>
+                        <span class="tag">Mongoose</span>
+                        <span class="tag">Schema Design</span>
+                        <span class="tag">Data Integrity</span>
+                        <span class="tag">Injection Prevention</span>
+                    </div>
+                    <div class="project-card__footer">
+                        <div class="project-card__status">
+                            <span class="project-card__status-dot"></span>
+                            <span>Complete</span>
+                        </div>
+                        <a href="https://github.com/ahmedabbas52233-a11y/Internship-Project-2" target="_blank" rel="noopener noreferrer" class="project-card__link">GitHub →</a>
                     </div>
                 </div>
 
                 <div class="project-card reveal reveal-delay-3">
                     <div class="project-card__header">
-                        <span class="project-card__num">PROJECT_03</span>
-                        <div class="project-card__icon">🗄️</div>
-                    </div>
-                    <h3 class="project-card__title">The Memory — MongoDB</h3>
-                    <p class="project-card__desc">Migrated to persistent MongoDB with Mongoose ODM. Schema design, relationships, cascade deletes, injection prevention.</p>
-                    <div class="project-card__tags">
-                        <span class="tag">MongoDB</span>
-                        <span class="tag">Mongoose</span>
-                        <span class="tag">Schema</span>
-                        <span class="tag">Integrity</span>
-                    </div>
-                    <div class="project-card__footer">
-                        <div class="project-card__status">
-                            <span class="project-card__status-dot"></span>
-                            <span>Complete</span>
-                        </div>
-                        <a href="https://github.com/ahmedabbas52233-a11y/Internship-Project-2" target="_blank" rel="noopener noreferrer" class="project-card__link">View Repo →</a>
-                    </div>
-                </div>
-
-                <div class="project-card reveal reveal-delay-4">
-                    <div class="project-card__header">
                         <span class="project-card__num">PROJECT_04</span>
                         <div class="project-card__icon">🔐</div>
                     </div>
-                    <h3 class="project-card__title">The Vault — Authentication</h3>
-                    <p class="project-card__desc">JWT-based auth with bcrypt password hashing. Protected routes, token verification, and secure user sessions.</p>
+                    <h3 class="project-card__title">The Vault — Authentication & Authorization</h3>
+                    <p class="project-card__desc">JWT-based authentication system with bcrypt password hashing. Implemented registration, login, protected routes with token verification middleware, and secure user session management.</p>
                     <div class="project-card__tags">
                         <span class="tag">JWT</span>
                         <span class="tag">bcrypt</span>
-                        <span class="tag">Auth</span>
+                        <span class="tag">Auth Middleware</span>
+                        <span class="tag">Protected Routes</span>
                         <span class="tag">Security</span>
                     </div>
                     <div class="project-card__footer">
@@ -184,14 +151,37 @@
                             <span class="project-card__status-dot"></span>
                             <span>Complete</span>
                         </div>
-                        <a href="https://github.com/ahmedabbas52233-a11y/Internship-Project-2" target="_blank" rel="noopener noreferrer" class="project-card__link">View Repo →</a>
+                        <a href="https://github.com/ahmedabbas52233-a11y/Internship-Project-2" target="_blank" rel="noopener noreferrer" class="project-card__link">GitHub →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="section__header reveal">
+                <div class="section__eyebrow">Architecture</div>
+                <h2 class="section__title">How It All Connects</h2>
+                <p class="section__desc">The frontend you're viewing right now connects to the backend API in real-time.</p>
+            </div>
+
+            <div class="arch-diagram reveal">
+                <div class="arch-diagram__grid">
+                    <div>
+                        <div class="arch-diagram__item-icon">🎨</div>
+                        <h4 class="arch-diagram__item-title">Frontend</h4>
+                        <p class="arch-diagram__item-desc">HTML5, CSS3, JavaScript<br>GitHub Pages</p>
+                    </div>
+                    <div class="arch-diagram__arrow">⟷ REST API ⟷</div>
+                    <div>
+                        <div class="arch-diagram__item-icon">⚡</div>
+                        <h4 class="arch-diagram__item-title">Backend</h4>
+                        <p class="arch-diagram__item-desc">Node.js, Express, MongoDB<br>Render / Railway</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="footer__inner">
             <p class="footer__text">Built with passion during DecodeLabs Internship 2026</p>

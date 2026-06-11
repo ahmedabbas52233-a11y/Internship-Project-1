@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact — Ahmed Abbas | DecodeLabs 2026</title>
+    <meta name="description" content="Get in touch. Connect via GitHub, LinkedIn, or send a message through the live API.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+<base target="_blank">
+</head>
+<body>
+    <canvas id="particle-canvas"></canvas>
+    <div class="noise-overlay"></div>
+
+    <nav class="nav" id="navbar">
+        <div class="nav__inner">
+            <a href="index.html" class="nav__brand">
+                <div class="nav__brand-icon">A</div>
+                <div class="nav__brand-text">Ahmed <span>Abbas</span></div>
+            </a>
+            <ul class="nav__links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="playground.html">API Playground</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <div class="nav__status" id="navStatus">
+                <span class="status-dot" id="statusDot"></span>
+                <span id="statusText">Checking...</span>
+            </div>
+            <button class="nav__menu-btn" id="menuBtn">☰</button>
+        </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu__close" id="closeMenu">✕</button>
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="playground.html">API Playground</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <section class="hero hero--compact">
+        <div class="hero__inner hero--center">
+            <div class="hero__content">
+                <div class="hero__badge">
+                    <span>◉</span>
+                    <span>Connect</span>
+                </div>
+                <h1 class="hero__title">
+                    Let's <span class="gradient">Talk</span>
+                </h1>
+                <p class="hero__desc">
+                    Open to internship opportunities, freelance projects, and collaborations. Reach out through any channel.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section--tight">
+        <div class="section__inner">
+            <div class="contact-layout reveal">
+                <div class="contact-info">
+                    <h3 class="contact-info__title">Get In Touch</h3>
+                    <p class="contact-info__desc">
+                        Whether you have a question about my projects, want to discuss an opportunity, or just want to say hi — I'll get back to you as soon as possible.
+                    </p>
+                    <div class="contact-links">
+                        <a href="https://github.com/ahmedabbas52233-a11y" target="_blank" rel="noopener noreferrer" class="contact-link">
+                            <div class="contact-link__icon">🐙</div>
+                            <div class="contact-link__text">
+                                GitHub
+                                <span>@ahmedabbas52233-a11y</span>
+                            </div>
+                        </a>
+                        <a href="https://linkedin.com/in/ahmedabbas52233" target="_blank" rel="noopener noreferrer" class="contact-link">
+                            <div class="contact-link__icon">💼</div>
+                            <div class="contact-link__text">
+                                LinkedIn
+                                <span>Ahmed Abbas</span>
+                            </div>
+                        </a>
+                        <a href="mailto:ahmedabbas52233@gmail.com" class="contact-link">
+                            <div class="contact-link__icon">✉️</div>
+                            <div class="contact-link__text">
+                                Email
+                                <span>ahmedabbas52233@gmail.com</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="api-section api-section--small">
+                    <h3>Send a Message</h3>
+                    <p class="form-desc">This form submits directly to the MongoDB database via the live API.</p>
+                    <form class="form" id="quickContactForm">
+                        <div class="form-group">
+                            <input type="text" id="quickName" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="quickEmail" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="quickMessage" placeholder="Your Message" required class="textarea--short"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn--primary btn--full">
+                            Send Message →
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__inner">
+            <p class="footer__text">Built with passion during DecodeLabs Internship 2026</p>
+            <div class="footer__links">
+                <a href="https://github.com/ahmedabbas52233-a11y/Internship-Project-1" target="_blank" rel="noopener noreferrer">Project 1</a>
+                <a href="https://github.com/ahmedabbas52233-a11y/Internship-Project-2" target="_blank" rel="noopener noreferrer">Project 2-4</a>
+                <a href="playground.html">API Playground</a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="toast" id="toast"></div>
+    <script src="/main.js"></script>
+</body>
+</html>

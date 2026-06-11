@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Playground — Ahmed Abbas | DecodeLabs 2026</title>
+    <meta name="description" content="Interactive API playground. Test live backend endpoints with real-time responses.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+<base target="_blank">
+</head>
+<body>
+    <canvas id="particle-canvas"></canvas>
+    <div class="noise-overlay"></div>
+
+    <nav class="nav" id="navbar">
+        <div class="nav__inner">
+            <a href="index.html" class="nav__brand">
+                <div class="nav__brand-icon">A</div>
+                <div class="nav__brand-text">Ahmed <span>Abbas</span></div>
+            </a>
+            <ul class="nav__links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="playground.html" class="active">API Playground</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav__status" id="navStatus">
+                <span class="status-dot" id="statusDot"></span>
+                <span id="statusText">Checking...</span>
+            </div>
+            <button class="nav__menu-btn" id="menuBtn">☰</button>
+        </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu__close" id="closeMenu">✕</button>
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="playground.html">API Playground</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <section class="hero hero--compact">
+        <div class="hero__inner hero--center">
+            <div class="hero__content">
+                <div class="hero__badge">
+                    <span>◉</span>
+                    <span>Live Testing</span>
+                </div>
+                <h1 class="hero__title">
+                    API <span class="gradient">Playground</span>
+                </h1>
+                <p class="hero__desc">
+                    Test real backend endpoints. Every request hits the live database. Watch responses update in real-time.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Dashboard -->
+    <section class="section section--tight">
+        <div class="section__inner">
+            <div class="section__header reveal">
+                <div class="section__eyebrow">Live Data</div>
+                <h2 class="section__title">Database Dashboard</h2>
+                <p class="section__desc">Real-time metrics from the MongoDB database. Auto-refreshes every 30 seconds.</p>
+            </div>
+            <div class="dashboard-grid reveal">
+                <div class="dash-card">
+                    <div class="dash-card__header">
+                        <span class="dash-card__label">Total Users</span>
+                        <div class="dash-card__icon dash-card__icon--users">👤</div>
+                    </div>
+                    <div class="dash-card__value dash-card__value--users" id="dashUsers">—</div>
+                    <div class="dash-card__sub">Database records</div>
+                </div>
+                <div class="dash-card">
+                    <div class="dash-card__header">
+                        <span class="dash-card__label">Total Posts</span>
+                        <div class="dash-card__icon dash-card__icon--posts">📝</div>
+                    </div>
+                    <div class="dash-card__value dash-card__value--posts" id="dashPosts">—</div>
+                    <div class="dash-card__sub">Database records</div>
+                </div>
+                <div class="dash-card">
+                    <div class="dash-card__header">
+                        <span class="dash-card__label">Contacts</span>
+                        <div class="dash-card__icon dash-card__icon--contacts">✉️</div>
+                    </div>
+                    <div class="dash-card__value dash-card__value--contacts" id="dashContacts">—</div>
+                    <div class="dash-card__sub">Submissions</div>
+                </div>
+                <div class="dash-card">
+                    <div class="dash-card__header">
+                        <span class="dash-card__label">API Status</span>
+                        <div class="dash-card__icon dash-card__icon--health">●</div>
+                    </div>
+                    <div class="dash-card__value dash-card__value--health" id="dashHealth">—</div>
+                    <div class="dash-card__sub" id="dashHealthSub">Checking...</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- API Testing -->
+    <section class="section">
+        <div class="section__inner">
+            <div class="section__header reveal">
+                <div class="section__eyebrow">Interactive</div>
+                <h2 class="section__title">Test Endpoints</h2>
+                <p class="section__desc">Send real requests to the backend and see live JSON responses.</p>
+            </div>
+
+            <div class="api-section reveal">
+                <div class="api-tabs">
+                    <button class="api-tab active">📨 Contact Form</button>
+                    <button class="api-tab">👤 Create User</button>
+                    <button class="api-tab">🏥 Health Check</button>
+                </div>
+
+                <!-- Contact Panel -->
+                <div class="api-panel active">
+                    <p class="form-desc">Submit a contact message. It gets saved to MongoDB and appears in the dashboard above.</p>
+                    <form class="form" id="contactForm">
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input type="text" id="contactName" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" id="contactEmail" placeholder="john@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea id="contactMessage" placeholder="Your message..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn--primary" id="contactSubmit">
+                            Send Message
+                            <span class="spinner" id="contactSpinner"></span>
+                        </button>
+                    </form>
+                    <div class="api-response" id="contactResponse"></div>
+                </div>
+
+                <!-- User Panel -->
+                <div class="api-panel">
+                    <p class="form-desc">Create a new user. Password is hashed with bcrypt before storage.</p>
+                    <form class="form" id="userForm">
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input type="text" id="userName" placeholder="Jane Smith" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" id="userEmail" placeholder="jane@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input type="password" id="userPassword" placeholder="Min 6 characters" required minlength="6">
+                        </div>
+                        <button type="submit" class="btn btn--primary" id="userSubmit">
+                            Create User
+                            <span class="spinner" id="userSpinner"></span>
+                        </button>
+                    </form>
+                    <div class="api-response" id="userResponse"></div>
+                </div>
+
+                <!-- Health Panel -->
+                <div class="api-panel">
+                    <p class="form-desc">Check if the API server and MongoDB connection are healthy.</p>
+                    <button class="btn btn--primary" id="healthBtn">
+                        Check Health
+                        <span class="spinner" id="healthSpinner"></span>
+                    </button>
+                    <div class="api-response" id="healthResponse"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__inner">
+            <p class="footer__text">Built with passion during DecodeLabs Internship 2026</p>
+            <div class="footer__links">
+                <a href="https://github.com/ahmedabbas52233-a11y/Internship-Project-1" target="_blank" rel="noopener noreferrer">Project 1</a>
+                <a href="https://github.com/ahmedabbas52233-a11y/Internship-Project-2" target="_blank" rel="noopener noreferrer">Project 2-4</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="toast" id="toast"></div>
+    <script src="/main.js"></script>
+</body>
+</html>
