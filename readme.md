@@ -101,7 +101,7 @@ Internship-Project-1/
 
 ### Prerequisites
 - A modern web browser (Chrome, Firefox, Safari, Edge)
-- The backend API running locally or deployed
+- The backend API is running locally or deployed
 
 ### Local Development
 
@@ -112,7 +112,7 @@ Internship-Project-1/
    ```
 
 2. **Update the API URL** in `js/main.js`:
-   ```javascript
+   ```JavaScript
    const CONFIG = {
        API_BASE_URL: 'http://localhost:3000/api', // Local dev
        // API_BASE_URL: 'https://your-backend.onrender.com/api', // Production
