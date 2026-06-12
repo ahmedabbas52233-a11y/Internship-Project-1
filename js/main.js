@@ -1,7 +1,6 @@
 // ===== CONFIG =====
 const CONFIG = {
-    API_BASE_URL: 'https://decodelabs-api.onrender.com/api', // UPDATE THIS
-    // API_BASE_URL: 'http://localhost:3000/api', // Local dev
+API_BASE_URL: 'https://unfixed-huntress-alienable.ngrok-free.dev/api',
     REFRESH_INTERVAL: 30000,
     TOAST_DURATION: 4000
 };
